@@ -36,12 +36,6 @@
                 @enderror
             </div>
             
-            <div class="mb-4 flex items-center justify-between">
-                <label class="flex items-center">
-                    <input type="checkbox" name="remember" class="rounded border-gray-300 text-indigo-600">
-                    <span class="ml-2 text-sm text-gray-600">Запомнить меня</span>
-                </label>
-            </div>
             
             <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
                 Войти

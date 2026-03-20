@@ -17,18 +17,17 @@
         transition: all 0.3s ease;
     }
 </style>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-50 font-sans antialiased">
+<body class="bg-gray-50 font-sans antialiased flex flex-col min-h-screen">
 
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    @include('partials.header')
 
-   @include('partials.header')
+    <main class="flex-grow">
+        @yield('content')
+    </main>
 
-<main>
-    @yield('content')
-</main>
-
-@include('partials.footer', ['currentYear' => $currentYear ?? date('Y'), 'siteName' => $siteName ?? 'LaraFreelance'])
+    @include('partials.footer')
 
 </body>
 </html>

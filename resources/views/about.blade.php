@@ -7,10 +7,11 @@
 <section class="py-12 bg-white">
     <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">О нас</h1>
-
+        <div class="bg-indigo-600 mx-auto rounded-full"></div>
     </div>
 </section>
 
+<!-- Рассказ о нас -->
 <section class="py-12 bg-white">
     <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
@@ -32,7 +33,7 @@
     </div>
 </section>
 
-<!-- Простая карусель с работами -->
+<!-- Карусель -->
 <section class="py-12 bg-gray-50">
     <div class="container mx-auto px-6">
         <div class="text-center mb-8">
@@ -42,11 +43,11 @@
         
         <div class="relative max-w-4xl mx-auto" x-data="{ currentSlide: 0, slides: [
             {
-                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                image: 'https://img.freepik.com/premium-photo/person-front-computer-working-html_1112329-171146.jpg?semt=ais_hybrid',
                 title: 'Интернет-магазин на Laravel'
             },
             {
-                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                image: 'https://img.freepik.com/premium-photo/young-man-programming-welllit-workspace-with-multiple-monitors-green-plants-around-him-day_93675-258789.jpg?semt=ais_hybrid&w=740',
                 title: 'REST API для приложения'
             },
             {
@@ -54,7 +55,6 @@
                 title: 'CRM для логистики'
             }
         ] }">
-            <!-- Слайды -->
             <div class="overflow-hidden rounded-2xl shadow-lg">
                 <div class="flex transition-transform duration-500 ease-in-out" 
                      :style="{ transform: 'translateX(-' + (currentSlide * 100) + '%)' }">
@@ -69,7 +69,6 @@
                 </div>
             </div>
             
-
             <button @click="currentSlide = (currentSlide - 1 + slides.length) % slides.length" 
                     class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-md transition">
                 <i class="fas fa-chevron-left"></i>
@@ -80,7 +79,6 @@
                 <i class="fas fa-chevron-right"></i>
             </button>
             
-
             <div class="flex justify-center space-x-2 mt-4">
                 <template x-for="(slide, index) in slides" :key="index">
                     <button @click="currentSlide = index" 
@@ -92,6 +90,5 @@
         </div>
     </div>
 </section>
-
 
 @endsection

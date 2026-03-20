@@ -32,11 +32,17 @@ class User extends Authenticatable
         ];
     }
     
-    /**
-     * Проверка, является ли пользователь администратором
-     */
+    public function cartItems()
+{
+    return $this->hasMany(CartItem::class);
+}
+
     public function isAdmin(): bool
     {
         return $this->is_admin;
     }
+    public function orders()
+{
+    return $this->hasMany(Order::class);
+}
 }

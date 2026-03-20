@@ -4,7 +4,7 @@
 @section('title', 'Главная - Биржа фрилансеров')
 
 @section('content')
-<!-- Главный блок -->
+
 <section class="bg-gradient-to-br from-indigo-50 to-white py-16">
     <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
@@ -14,7 +14,6 @@
             Современная PHP-платформа для заказчиков и исполнителей.
         </p>
        <div class="flex justify-center space-x-4">
-<a href="{{ route('register', ['redirect' => request()->fullUrl()]) }}" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition shadow-lg">Начать</a>
     <a href="#works" class="bg-white text-indigo-600 border border-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition">Примеры работ</a>
 </div>
     </div>
